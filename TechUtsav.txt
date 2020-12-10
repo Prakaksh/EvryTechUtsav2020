@@ -1,0 +1,36 @@
+
+
+ProtoType  required
+Problem statement  required
+Prove the problem statement 
+feature  
+Build a RoadMap 
+
+
+IDS -- WEBApi GateWay
+
+Software required
+============================
+
+1) Dot NET Core -- Ver 3.1.3 -- Installation required
+2) Node JS - ver 14.15 -- Installation required
+3).SQL server management Studio (MS SQL Server) 2016  -- Installation required
+4) VS Studio 2019 --Installation required
+5) NPM 
+6) Rx Js 
+7) Angular - Version 7 or More
+
+Project Vision : Secure login with Api GateWay Intigration in the applicaion using (IDS) Identity System server.
+Problem Statement : For Multiple Application login Credential details saved in different database server with defferent access rights.
+Solution : For above problem statement IDS Api GateWay provides the solution by giving collabrated and identical credential rights with single secured Api Gateway.
+
+Technologies Staff Use
+=======================
+server 1 -- >> Database1 -- user login --user  prakash 123
+server 2 -- >> Database2 -- user login --user  prakas 456
+server 3 -- >> Database3 -- user login --user praksh 54565
+server 4 -- >> Database4 -- user login --user
+server 5 -- >> Database5 -- user login --user
+server 6 -- >> Database6 -- user login --user
+
+
