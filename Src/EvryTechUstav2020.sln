@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvryIDS.Persistence", "Infr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvryIDS.Api", "Presentation\EvryIDS.Api\EvryIDS.Api.csproj", "{8F2392F9-08B0-4B6E-91E6-110420496033}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvryIDS.Web", "Presentation\EvryIDS.Web\EvryIDS.Web.csproj", "{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvryIDS.Web1", "Presentation\EvryIDS.Web1\EvryIDS.Web1.csproj", "{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,30 @@ Global
 		{8F2392F9-08B0-4B6E-91E6-110420496033}.Release|x64.Build.0 = Release|Any CPU
 		{8F2392F9-08B0-4B6E-91E6-110420496033}.Release|x86.ActiveCfg = Release|Any CPU
 		{8F2392F9-08B0-4B6E-91E6-110420496033}.Release|x86.Build.0 = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|x64.Build.0 = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Debug|x86.Build.0 = Debug|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|x64.ActiveCfg = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|x64.Build.0 = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|x86.ActiveCfg = Release|Any CPU
+		{3ED2A3D4-B56A-49A6-96F1-88EBDCA00261}.Release|x86.Build.0 = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|x64.Build.0 = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|x64.ActiveCfg = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|x64.Build.0 = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DA270C0-DB49-44D1-9B4C-D7CC8D04CDE9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

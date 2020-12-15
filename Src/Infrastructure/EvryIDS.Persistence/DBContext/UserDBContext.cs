@@ -18,6 +18,7 @@ namespace EvryIDS.Persistence.DBContext
                 var com = new DynamicParameters();
                 User result=new User();
                 com.Add("@UserName", "fsdf");
+
                 try
                 {
                     result = sqlCon.Query<User>("usp_userGet", com, commandType: CommandType.StoredProcedure).FirstOrDefault();
