@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 using EvryIDS.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EvryIDS.Api.Controllers
 
@@ -12,6 +13,9 @@ namespace EvryIDS.Api.Controllers
         public UserController(IUser iuser)=>_iUser = iuser;
         
         [HttpGet]
+        [Authorize]
         public ActionResult GetUser() => Ok( _iUser.GetUser());
+
+
     }
 }
