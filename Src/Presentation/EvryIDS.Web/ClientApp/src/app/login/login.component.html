@@ -1,0 +1,49 @@
+
+<div class=""> 
+    <div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="card bg-light text-dark col-6">
+       <div class="login-popup-heading text-center">
+           <h4><i class="fa fa-lock" aria-hidden="true"></i> Login </h4>                        
+       </div>
+                               <!--<form accept-charset="utf-8" method="post" action="">-->
+       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+           <div class="form-group">
+               <input type="text" formControlName="username" class="form-control" id="user_id" 
+               placeholder="E-mail" [ngClass]="{ 'is-invalid': hasFieldError(f.username)  }" >
+               <div *ngIf=hasFieldError(f.username) class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+                <div *ngIf="f.username.errors.maxlength">Please enter less than or equal to 50 character</div>
+                <div *ngIf="f.username.errors.email">Please enter correct email ID</div>
+            </div>
+           </div>
+           <div class="form-group">
+               <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password" [ngClass]="{ 'is-invalid':  hasFieldError(f.password) }" />
+               <div *ngIf=hasFieldError(f.password) class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.maxlength">Please enter less than or equal to 15 character</div>
+                <div *ngIf="f.password.errors.minlength">Please enter more 8 character</div>
+            </div>
+           </div>
+           
+                <div class="form-group">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-outline-primary">Login</button>
+               
+            </div>
+              </div>
+       
+       </form>
+       <div class="form-group text-center">
+       <a class="pwd-forget" [routerLink]="['/forgotPassword']" id="open_forgotPassword">Forget Password</a>
+       </div>
+       
+   </div>
+
+   <div class="col-3">
+                     </div>
+                </div>
+
+            </div>

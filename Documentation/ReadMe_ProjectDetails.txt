@@ -44,6 +44,12 @@ dotnet add package Microsoft.Extensions.Configuration --version 5.0.0
 dotnet add package Dapper --version 2.0.78
 
 
+Agnular Command for Component generate
+========================================
+ng g c login --skip-import
+
+ng g m app-routing --flat
+
 https://localhost:5001/swagger/index.html
 
 

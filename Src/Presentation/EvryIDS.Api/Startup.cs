@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.IdentityModel.Logging;
+using System.Text;
 
 namespace EvryIDS.Api
 {
@@ -60,22 +61,49 @@ namespace EvryIDS.Api
 
             IdentityModelEventSource.ShowPII = true;
 
+
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = "JwtBearer";
+            //    options.DefaultChallengeScheme = "JwtBearer";
+            //}).AddJwtBearer("JwtBearer", jwtOptions =>
+            //{
+            //    jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+            //    {
+            //        IssuerSigningKeys = (IEnumerable<SecurityKey>)TokenController.SIGNING_KEY,
+            //        //
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false,
+            //        ValidateIssuerSigningKey = true,
+            //        ValidateLifetime = true,
+            //        ClockSkew = TimeSpan.FromMinutes(5)
+            //    };
+            //});
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = "JwtBearer";
                 options.DefaultChallengeScheme = "JwtBearer";
-            }).AddJwtBearer("JwtBearer", jwtOptions =>
+            }).AddJwtBearer("JwtBearer", options =>
             {
-                jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    IssuerSigningKeys = (IEnumerable<SecurityKey>)TokenController.SIGNING_KEY,
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
                     ValidateIssuerSigningKey = true,
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.FromMinutes(5)
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(TokenController.SECRET_KEY)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
                 };
             });
+            services.AddCors(c => {
+                c.AddPolicy("AllowOrigin",
+                    options => options.WithOrigins("*")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .WithExposedHeaders("X-eBearer")
+                //.WithExposedHeaders ("Content-Disposition")
+                );
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -87,7 +115,7 @@ namespace EvryIDS.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EvryIDS.Api v1"));
             }
-
+            app.UseCors("AllowOrigin");
             app.UseHttpsRedirection();
 
             app.UseRouting();

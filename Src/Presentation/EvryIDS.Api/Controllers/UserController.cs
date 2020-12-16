@@ -13,9 +13,8 @@ namespace EvryIDS.Api.Controllers
         public UserController(IUser iuser)=>_iUser = iuser;
         
         [HttpGet]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = "JwtBearer")]
         public ActionResult GetUser() => Ok( _iUser.GetUser());
-
 
     }
 }
