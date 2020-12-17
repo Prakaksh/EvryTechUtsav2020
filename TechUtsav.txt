@@ -12,7 +12,7 @@ IDS -- WEBApi GateWay
 Software required
 ============================
 
-1) Dot NET Core -- Ver 3.1.3 -- Installation required
+1) Dot NET Core -- Ver 5.1 -- Installation required
 2) Node JS - ver 14.15 -- Installation required
 3).SQL server management Studio (MS SQL Server) 2016  -- Installation required
 4) VS Studio 2019 --Installation required

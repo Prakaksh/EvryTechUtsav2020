@@ -54,12 +54,13 @@ export class LoginComponent implements OnInit {
     const password = this.f.password.value;
 
     this.auth.getUserDetails(username, password).subscribe(data => {
+      debugger;
       console.log(data)
-      if (data.success) {
-        this.router.navigate(['home']);
+      if (true) {
+        this.router.navigate(['Dashboard']);
         this.auth.setLoggedIn(true);
       } else {
-        window.alert(data.message);
+        // window.alert(data.message);
       }
     });
 

@@ -31,9 +31,9 @@ export class AuthService {
     // post the details to API server return user info if correct
     return this.http.get<any>(this.apiUrl + 'api/login/Auth')
     .pipe(map(objResult => {
-      debugger;
+
       console.log(objResult);
-      if (objResult && objResult === 'success') {
+      if (objResult[0] === 'success') {
           localStorage.setItem('currentUser', 'logged-in');
           return true;
       } else {
